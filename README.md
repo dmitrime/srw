@@ -17,10 +17,13 @@ First compile the files in alglib directory into object (.o) files. These compil
 
 You must provide a custom implementation of a Graph class. 
 It must support the following:
-iterate_outgoing_edges() -- returns a Graph::iterator object.
+  iterate_outgoing_edges() -- returns a Graph::iterator object.
+
 Graph::iterator has the following fields:
-v2 -- neighbouring node
-data -- timestamp when the connection was created
+  end() -- returns true if there is nothing more to iterate
+  v2 -- neighbouring node
+  data -- timestamp when the connection was created
+
 Graph is loaded with load_graph_file() function that must also be implemented.
 
 The implementation relies on OpenMP for parallelization of some code parts.
